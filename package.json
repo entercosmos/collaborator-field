@@ -1,7 +1,7 @@
 {
-  "name": "collaborator-field",
-  "version": "1.0.0",
-  "description": "collaborator-field React component",
+  "name": "@cmds/collaborator-field",
+  "version": "0.1.0",
+  "description": "Used for selecting a collaborator.",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -31,7 +31,7 @@
   "author": "",
   "homepage": "",
   "license": "MIT",
-  "repository": "",
+  "repository": "git@github.com:entercosmos/collaborator-field.git",
   "keywords": [
     "react-component"
   ]
