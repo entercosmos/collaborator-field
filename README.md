@@ -1,5 +1,7 @@
 # ![CollaboratorField](https://user-images.githubusercontent.com/44801418/48109949-2d61b400-e27c-11e8-830e-29347fc455b0.png) CollaboratorField
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/entercosmos/collaborator-field.svg)](https://greenkeeper.io/)
+
 [![npm package][npm-badge]][npm]
 
 Used for selecting a collaborator.
