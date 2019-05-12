@@ -1,5 +1,6 @@
 import React from 'react'
 import {css} from 'emotion'
+import defaultEmptyRenderer from '../../defaultEmptyRenderer';
 
 export default class CollaboratorField extends React.Component {
 
@@ -33,7 +34,7 @@ export default class CollaboratorField extends React.Component {
                         white-space: nowrap;
                     `}
                 >
-                    {collaborator ? collaborator.name : <div>&nbsp;</div>}
+                    {collaborator ? collaborator.name : defaultEmptyRenderer()}
                 </div>
             </div>
         )

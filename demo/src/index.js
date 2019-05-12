@@ -1,7 +1,7 @@
-import React, {Component} from 'react'
-import {render} from 'react-dom'
-import {css, injectGlobal} from 'emotion'
-import {Canvas, Heading, Paragraph, Box} from '@pndr/demo-utils'
+import React, { Component } from 'react'
+import { render } from 'react-dom'
+import { css, injectGlobal } from 'emotion'
+import { Canvas, Heading, Paragraph, Box } from '@pndr/demo-utils'
 
 injectGlobal`
     * {
@@ -9,17 +9,13 @@ injectGlobal`
     }
     body {
         font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
-        background-color: #fff;
+        margin: 0;
     }
 `
 
 import CollaboratorField from '../../src'
 
 class Example extends Component {
-
-    state = {
-        collaboratorId: 'col1'
-    }
 
     render() {
         return (
@@ -29,7 +25,7 @@ class Example extends Component {
                         id={'field'}
                         roleId={this.props.roleId}
                         contextId={this.props.contextId}
-                        collaboratorId={this.state.collaboratorId}
+                        collaboratorId={this.props.collaboratorId}
                         collaborators={[{
                             id: 'col1',
                             name: 'Luke Skywalker'
@@ -40,25 +36,19 @@ class Example extends Component {
                             id: 'col3',
                             name: 'Leia Organa'
                         }]}
-                        onChange={({collaboratorId}) => this.setState({collaboratorId})}
+                        onChange={this.props.onChange}
                     />
                 </div>
-                {this.props.roleId === 'editor' ? (
-                    <div>
-                        <h5>
-                            State
-                        </h5>
-                        <pre>
-                    {JSON.stringify(this.state, null, 2)}
-                    </pre>
-                    </div>
-                ) : null}
             </div>
         )
     }
 }
 
 class Demo extends React.Component {
+
+    state = {
+        collaboratorId: 'col1'
+    }
 
     render() {
 
@@ -74,7 +64,17 @@ class Demo extends React.Component {
                     <Example
                         roleId={'editor'}
                         contextId={'recordDetail'}
+                        collaboratorId={this.state.collaboratorId}
+                        onChange={this.handleChange}
                     />
+                </Box>
+                <Paragraph>
+                    State
+                </Paragraph>
+                <Box>
+                    <pre>
+                        {JSON.stringify(this.state, null, 2)}
+                    </pre>
                 </Box>
                 <Paragraph>
                     With read only role
@@ -83,6 +83,8 @@ class Demo extends React.Component {
                     <Example
                         roleId={'readOnly'}
                         contextId={'recordDetail'}
+                        collaboratorId={this.state.collaboratorId}
+                        onChange={this.handleChange}
                     />
                 </Box>
                 <Heading>
@@ -95,6 +97,8 @@ class Demo extends React.Component {
                     <Example
                         roleId={'readOnly'}
                         contextId={'recordListItem'}
+                        collaboratorId={this.state.collaboratorId}
+                        onChange={this.handleChange}
                     />
                 </Box>
                 <Heading>
@@ -107,11 +111,15 @@ class Demo extends React.Component {
                     <Example
                         roleId={'readOnly'}
                         contextId={'recordGalleryCard'}
+                        collaboratorId={this.state.collaboratorId}
+                        onChange={this.handleChange}
                     />
                 </Box>
             </Canvas>
         )
     }
+
+    handleChange = ({ collaboratorId }) => this.setState({ collaboratorId })
 }
 
-render(<Demo/>, document.querySelector('#demo'))
+render(<Demo />, document.querySelector('#demo'))

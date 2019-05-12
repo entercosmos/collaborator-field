@@ -98,17 +98,16 @@
   dependencies:
     emotion "^10.0.9"
 
-"@pndr/icons@^0.1.0":
+"@pndr/icons@^0.4.0":
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@pndr/icons/-/icons-0.4.0.tgz#25845027598a7aadebbcb5381beaf6b697b2d747"
   integrity sha512-Edk9RPHY+oQI9ImoTIWWRNOxaqSB9whch9oP/F4JyQj5hH5Ka9iJEmvy3rQTwXYdV8uPBwyj6GG4YGrSO+Faug==
 
-"@pndr/select@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@pndr/select/-/select-0.6.0.tgz#fc25e34c7992459f89a95b8e817b4e5ac0c7078a"
-  integrity sha512-JAvITBMAAT+rj26Q8xehxswunzr6HZOUFlEn+DIHG9Whz+uxJDZWBTElWhgxIh/Giv4gqT3Dyl82c3+Rx12HMw==
+"@pndr/select@0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@pndr/select/-/select-0.7.0.tgz#fb0491430201c30684c53ece9177bbcb5694e0dc"
+  integrity sha512-HQNunBpQGTqNFA2uhYXq0wDzSNcqG7e15IE8jRTL4eWY8oG8z2hhyOowW48dxK5jxkiwKsbsP1hTT8tkGJiRQA==
   dependencies:
-    "@pndr/icons" "^0.1.0"
     prop-types "^15.6.2"
     react-click-outside "github:tj/react-click-outside"
 

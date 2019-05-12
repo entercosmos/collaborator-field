@@ -1,6 +1,6 @@
 {
   "name": "@pndr/collaborator-field",
-  "version": "0.3.0",
+  "version": "0.5.0",
   "description": "Used for selecting a collaborator.",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -11,6 +11,7 @@
     "umd"
   ],
   "scripts": {
+    "deploy": "cd demo/dist && surge --project ./ --domain pndr-collaborator-field.surge.sh",
     "build": "nwb build-react-component",
     "clean": "nwb clean-module && nwb clean-demo",
     "prepublishOnly": "npm run build",
@@ -27,8 +28,8 @@
   },
   "devDependencies": {
     "@pndr/demo-utils": "^0.3.0",
-    "@pndr/select": "^0.6.0",
     "@pndr/icons": "^0.4.0",
+    "@pndr/select": "0.7.0",
     "nwb": "0.23.x",
     "react": "^16.6.1",
     "react-dom": "^16.6.1"
