@@ -1,6 +1,6 @@
 {
-  "name": "@cmds/collaborator-field",
-  "version": "0.1.0",
+  "name": "@pndr/collaborator-field",
+  "version": "0.3.0",
   "description": "Used for selecting a collaborator.",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -20,13 +20,15 @@
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
-    "@cmds/select": "^0.2.0",
     "emotion": "^10.0.6"
   },
   "peerDependencies": {
     "react": "16.x"
   },
   "devDependencies": {
+    "@pndr/demo-utils": "^0.3.0",
+    "@pndr/select": "^0.6.0",
+    "@pndr/icons": "^0.4.0",
     "nwb": "0.23.x",
     "react": "^16.6.1",
     "react-dom": "^16.6.1"

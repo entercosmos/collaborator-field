@@ -1,5 +1,5 @@
 import React from 'react'
-import Select from '@cmds/select'
+import Select from '@pndr/select'
 
 export default class SingleLineTextField extends React.Component {
 

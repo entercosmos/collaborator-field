@@ -15,15 +15,7 @@ export default class CollaboratorField extends React.Component {
                 data-role-id={this.props.roleId}
                 className={css`
                         position: relative;
-                        font-size: 13px;
                         height: 100%;
-                        padding: 0;
-                        margin: 0;
-                        vertical-align: top;
-                        background: white;
-                        color: #111111;
-                        cursor: default;
-                        outline: none;
                         display: flex;
                         flex-wrap: wrap;
                     `}

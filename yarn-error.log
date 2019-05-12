@@ -1,0 +1,75 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add @pndr/select -D
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.15.2
+
+Node version: 
+  10.15.3
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@pndr%2fselect: Not found
+      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66058:18)
+      at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:129541:22)
+      at Request.emit (events.js:189:13)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:130513:10)
+      at Request.emit (events.js:189:13)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:130435:12)
+      at Object.onceWrapper (events.js:277:13)
+      at IncomingMessage.emit (events.js:194:15)
+      at endReadableNT (_stream_readable.js:1125:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
+
+npm manifest: 
+  {
+    "name": "@pndr/collaborator-field",
+    "version": "0.2.0",
+    "description": "Used for selecting a collaborator.",
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "files": [
+      "css",
+      "es",
+      "lib",
+      "umd"
+    ],
+    "scripts": {
+      "build": "nwb build-react-component",
+      "clean": "nwb clean-module && nwb clean-demo",
+      "prepublishOnly": "npm run build",
+      "start": "nwb serve-react-demo",
+      "test": "nwb test-react",
+      "test:coverage": "nwb test-react --coverage",
+      "test:watch": "nwb test-react --server"
+    },
+    "dependencies": {
+      "emotion": "^10.0.6"
+    },
+    "peerDependencies": {
+      "react": "16.x"
+    },
+    "devDependencies": {
+      "nwb": "0.23.x",
+      "react": "^16.6.1",
+      "react-dom": "^16.6.1"
+    },
+    "author": "",
+    "homepage": "",
+    "license": "MIT",
+    "repository": "git@github.com:entercosmos/collaborator-field.git",
+    "keywords": [
+      "react-component"
+    ]
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

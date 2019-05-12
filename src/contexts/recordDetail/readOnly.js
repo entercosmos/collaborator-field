@@ -12,22 +12,12 @@ export default class CollaboratorField extends React.Component {
         return (
             <div
                 className={css`
-                    font-size: 13px;
-                    padding: 0;
-                    margin: 0;
-                    color: #111111;
-                    cursor: default;
-                    outline: none;
                     display: flex;
-                    vertical-align: middle;
                     height: auto;
                     position: relative;
                     white-space: normal;
-                    line-height: 12px;
-                    box-shadow: none;
                     overflow: visible;
                     box-sizing: border-box;
-                    background-color: transparent;
                 `}
             >
                 <div

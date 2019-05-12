@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {render} from 'react-dom'
 import {css, injectGlobal} from 'emotion'
+import {Canvas, Heading, Paragraph, Box} from '@pndr/demo-utils'
 
 injectGlobal`
     * {
@@ -23,13 +24,7 @@ class Example extends Component {
     render() {
         return (
             <div>
-                <div
-                    className={css`
-                    width: 300px;
-                    display: flex;
-                    height: 40px;
-                `}
-                >
+                <div>
                     <CollaboratorField
                         id={'field'}
                         roleId={this.props.roleId}
@@ -68,56 +63,53 @@ class Demo extends React.Component {
     render() {
 
         return (
-            <div>
-                <h1>CollaboratorField Demo</h1>
-                <p>
-                    Used for selecting a collaborator.
-                </p>
-                <h2>
-                    Context based
-                </h2>
-                The behaviour of the component changes based on the context in which it is rendered.
-                <h3>
+            <Canvas>
+                <Heading>
                     RecordDetail context
-                </h3>
-                <p>
-                    Used for displaying the collaborator field in a record detail.
-                </p>
-                <h4>
-                    Editor role
-                </h4>
-                <Example
-                    roleId={'editor'}
-                    contextId={'recordDetail'}
-                />
-                <h4>
-                    Read only role
-                </h4>
-                <Example
-                    roleId={'readOnly'}
-                    contextId={'recordDetail'}
-                />
-                <h3>
+                </Heading>
+                <Paragraph>
+                    With editor role
+                </Paragraph>
+                <Box>
+                    <Example
+                        roleId={'editor'}
+                        contextId={'recordDetail'}
+                    />
+                </Box>
+                <Paragraph>
+                    With read only role
+                </Paragraph>
+                <Box>
+                    <Example
+                        roleId={'readOnly'}
+                        contextId={'recordDetail'}
+                    />
+                </Box>
+                <Heading>
                     RecordListItem context
-                </h3>
-                <h4>
-                    Read only role
-                </h4>
-                <Example
-                    roleId={'readOnly'}
-                    contextId={'recordListItem'}
-                />
-                <h3>
+                </Heading>
+                <Paragraph>
+                    With read only role
+                </Paragraph>
+                <Box>
+                    <Example
+                        roleId={'readOnly'}
+                        contextId={'recordListItem'}
+                    />
+                </Box>
+                <Heading>
                     RecordGalleryCard context
-                </h3>
-                <h4>
-                    Read only role
-                </h4>
-                <Example
-                    roleId={'readOnly'}
-                    contextId={'recordGalleryCard'}
-                />
-            </div>
+                </Heading>
+                <Paragraph>
+                    With read only role
+                </Paragraph>
+                <Box>
+                    <Example
+                        roleId={'readOnly'}
+                        contextId={'recordGalleryCard'}
+                    />
+                </Box>
+            </Canvas>
         )
     }
 }
